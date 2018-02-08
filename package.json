@@ -1,0 +1,19 @@
+{
+   "name": "janus-slack-bot",
+   "version": "1.0.0",
+   "description": "An attendance slack bot",
+   "main": "./src/janusbot.js",
+   "dependencies": {
+      "botkit": "0.4.0"
+   },
+   "devDependencies": {},
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": ""
+   },
+   "author": "Ahmed Shaalan",
+   "license": "Apache-2.0"
+}
