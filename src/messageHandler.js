@@ -1,4 +1,6 @@
-const messageHandler = () => {
+const { rtm, web, appData } = require('./bot')
+
+const messageHandler = message => {
    // For structure of `message`, see https://api.slack.com/events/message
 
    // Skip messages that are from a bot or my own user ID
