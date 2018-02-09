@@ -7,7 +7,7 @@ var moment = require('moment')
 var scheduledMessagesJob = new CronJob(
    '* * * * *',
    function() {
-      console.log(`DEBUG: Cron job working @ ${moment().format('HH:mm')}`)
+      console.debug(`DEBUG: Cron job working @ ${moment().format('HH:mm')}`)
       rtm.sendMessage(
          `DEBUG: Crong job @ ${moment().format('HH:mm')}`,
          'D960GKPAN'
