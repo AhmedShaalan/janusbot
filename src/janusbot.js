@@ -19,6 +19,7 @@ This is a sample Slack bot built with Botkit.
 
 var Botkit = require('botkit')
 var fs = require('fs') // NEW: Add this require (for loading from files).
+var emoji = require('node-emoji')
 
 var controller = Botkit.slackbot({ debug: false })
 
@@ -43,10 +44,21 @@ fs.readFile(process.env.slack_token_path, function(err, data) {
 })
 // END: Load Slack token from file.
 
+function janusReply(bot, message) {
+   bot.reply(message, 'This' + emoji.random().emoji)
+}
+
+function janusOnMessageReceived(bot, message) {
+   // carefully examine and
+   // handle the message here!
+   // Note: Platforms such as Slack send many kinds of messages, not all of which contain a text field!
+   console.log(emoji.random())
+}
+
+controller.on('message_received', janusOnMessageReceived)
+
 controller.hears(
    ['hello', 'hi'],
    ['direct_message', 'direct_mention', 'mention'],
-   function(bot, message) {
-      bot.reply(message, 'Meow. :smile_cat:')
-   }
+   janusReply
 )
