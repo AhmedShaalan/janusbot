@@ -16,5 +16,6 @@
 
 # v0.0.1 Action list
 
+* get bot's chanel id
 * Send message at certain time.
    * the message should contain actions
