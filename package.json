@@ -1,6 +1,6 @@
 {
    "name": "janus-slack-bot",
-   "version": "1.0.0",
+   "version": "0.0.0",
    "description": "An attendance slack bot",
    "main": "janusbot.js",
    "dependencies": {

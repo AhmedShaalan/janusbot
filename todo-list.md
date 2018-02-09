@@ -13,3 +13,8 @@
 * First message in the morning should contains a (Morning Honey, you came to work?) with replies yes and no actions.
 
 * Send welcome message to new users (https://api.slack.com/best-practices/blueprints/new-user-notification)
+
+# v0.0.1 Action list
+
+* Send message at certain time.
+   * the message should contain actions
