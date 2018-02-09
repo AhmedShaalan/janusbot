@@ -1,7 +1,6 @@
 const messageHandler = require('./src/messageHandler')
 const { rtm, web, appData, RTM_EVENTS, CLIENT_EVENTS } = require('./src/bot')
 const scheduledMessagesJob = require('./src/scheduledMessagesJob')
-const getUsersIds = require('./src/getUsersIds')
 
 // The client will emit an RTM.AUTHENTICATED event on when the connection data is avaiable
 // (before the connection is open)
@@ -26,6 +25,15 @@ rtm.on(CLIENT_EVENTS.RTM.RTM_CONNECTION_OPENED, function() {
 })
 
 rtm.on(RTM_EVENTS.MESSAGE, messageHandler)
+
+// Get list of direct messages
+web.im.list((err, data) => {
+   if (err) {
+      console.error('ERROR: web.users.list Error:', err) // eslint-disable-line no-console
+   } else {
+      console.log(data)
+   }
+})
 
 // Start the connecting process
 rtm.start()
