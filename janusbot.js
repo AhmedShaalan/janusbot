@@ -1,5 +1,6 @@
 const messageHandler = require('./src/messageHandler')
 const { rtm, web, appData, RTM_EVENTS, CLIENT_EVENTS } = require('./src/bot')
+const scheduledMessagesJob = require('./src/scheduledMessagesJob')
 
 // The client will emit an RTM.AUTHENTICATED event on when the connection data is avaiable
 // (before the connection is open)
@@ -17,6 +18,10 @@ rtm.on(CLIENT_EVENTS.RTM.AUTHENTICATED, connectData => {
 rtm.on(CLIENT_EVENTS.RTM.RTM_CONNECTION_OPENED, function() {
    console.log('JanusBot: Connected')
    rtm.sendMessage('DEBUG: Connected', 'D960GKPAN') // make this chanel id dynamic..
+
+   scheduledMessagesJob.start()
+
+   // Call your functions here
 })
 
 rtm.on(RTM_EVENTS.MESSAGE, messageHandler)
