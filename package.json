@@ -4,7 +4,8 @@
    "description": "An attendance slack bot",
    "main": "./src/janusbot.js",
    "dependencies": {
-      "botkit": "0.4.0"
+      "botkit": "0.4.0",
+      "node-emoji": "^1.8.1"
    },
    "devDependencies": {},
    "scripts": {
