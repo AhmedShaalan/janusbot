@@ -7,4 +7,5 @@
 
 # notes
 
-* export slack_token_path=
+* Add slack token to environment variables (export slack_token_path=)
+* Add slack webhook URL to environment variables (export SLACK_WEBHOOK_URL=https://hooks.slack.com/services/...)

@@ -11,3 +11,5 @@
    * if no, then it asks him why? (work from home, casual leave, etc.)
 
 * First message in the morning should contains a (Morning Honey, you came to work?) with replies yes and no actions.
+
+* Send welcome message to new users (https://api.slack.com/best-practices/blueprints/new-user-notification)
