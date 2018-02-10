@@ -2,7 +2,7 @@ const messageHandler = require('./src/messageHandler')
 const { rtm, web, appData, RTM_EVENTS, CLIENT_EVENTS } = require('./src/bot')
 const scheduledMessagesJob = require('./src/scheduledMessagesJob')
 const { updateDMChannels } = require('./src/channels')
-const { DMChannelsIDsArr } = require('./src/channels')
+const { updateUsersList } = require('./src/users')
 
 // The client will emit an RTM.AUTHENTICATED event on when the connection data is avaiable
 // (before the connection is open)
@@ -38,6 +38,16 @@ web.im.list((err, data) => {
    } else {
       console.debug(data)
       updateDMChannels(data)
+   }
+})
+
+// Get list of users
+web.users.list((err, data) => {
+   if (err) {
+      console.error('web.users.list Error:', err) // eslint-disable-line no-console
+   } else {
+      //   console.log(data)
+      updateUsersList(data)
    }
 })
 

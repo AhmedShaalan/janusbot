@@ -13,6 +13,7 @@ const updateDMChannels = data => {
 }
 
 const extractChannelsIds = () => {
+   // TODO: filter bots by requesting user info from users.js
    DMChannelsIDs = DMChannels.filter(
       DMChannelObject =>
          DMChannelObject.is_user_deleted == false &&
@@ -34,3 +35,5 @@ const DMChannelsIDsArr = () => {
 }
 
 module.exports = { updateDMChannels, DMChannelsArr, DMChannelsIDsArr }
+
+// TODO: maybe implement pagination
