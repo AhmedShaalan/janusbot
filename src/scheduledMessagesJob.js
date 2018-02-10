@@ -10,7 +10,7 @@ var scheduledMessagesJob = new CronJob(
       console.debug(`DEBUG: Cron job working @ ${moment().format('HH:mm')}`)
 
       sendToMultipleIDs(
-         `DEBUG: Cron job for DM: @ ${moment().format('HH:mm')}`,
+         `DEBUG: Cron job. @ ${moment().format('HH:mm')}`,
          DMChannelsIDsArr()
       )
    },
@@ -25,8 +25,6 @@ module.exports = scheduledMessagesJob
 
 // TODO: Set a watchdog for the job
 // TODO: ask the the user for their time zone OR take time zone from slack workspace
-
-
 
 // TODO: Unhandled rejection SlackRTMError: ws not connected, unable to send message
 //     at RTMClient.send (/Users/ahmedshaalan/Workspace/Developer/janus/node_modules/@slack/client/lib/clients/rtm/client.js:755:11)

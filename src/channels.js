@@ -1,5 +1,6 @@
 let DMChannels = []
 let DMChannelsIDs = []
+const { isUserExist } = require('./users')
 
 const updateDMChannels = data => {
    // drop old data if exists.
@@ -13,17 +14,12 @@ const updateDMChannels = data => {
 }
 
 const extractChannelsIds = () => {
-   // TODO: filter bots by requesting user info from users.js
-   DMChannelsIDs = DMChannels.filter(
-      DMChannelObject =>
-         DMChannelObject.is_user_deleted == false &&
-         DMChannelObject.user !== 'USLACKBOT'
-   ).map(DMChannelObject => ({
-      dmId: DMChannelObject.id,
-      dmUserId: DMChannelObject.user
+   DMChannelsIDs = DMChannels.filter(channelObject =>
+      isUserExist(channelObject.user)
+   ).map(channelObject => ({
+      channelID: channelObject.id,
+      userId: channelObject.user
    }))
-
-   console.debug('DEBUG: Parsed IDs: ' + DMChannelsIDs)
 }
 
 const DMChannelsArr = () => {
@@ -35,5 +31,3 @@ const DMChannelsIDsArr = () => {
 }
 
 module.exports = { updateDMChannels, DMChannelsArr, DMChannelsIDsArr }
-
-// TODO: maybe implement pagination
