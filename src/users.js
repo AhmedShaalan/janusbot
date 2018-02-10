@@ -40,10 +40,19 @@ const getUserObject = userID => {
    }
 }
 
+const isUserExist = userID => {
+   if (getUserObject(userID)) {
+      return true
+   } else {
+      return false
+   }
+}
+
 module.exports = {
    updateUsersList,
    usersArr,
    getAdminUsers,
    getOwnerUsers,
-   getUserObject
+   getUserObject,
+   isUserExist
 }
