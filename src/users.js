@@ -1,4 +1,5 @@
 let usersList = []
+let adminUsers = []
 
 const usersArr = () => usersList
 
@@ -13,7 +14,14 @@ const updateUsersList = data => {
    console.debug(usersList)
 }
 
+const getAdminUsers = () => {
+   adminUsers = usersList.filter(member => member.is_admin == true)
+
+   console.log(adminUsers)
+}
+
 module.exports = {
    updateUsersList,
-   usersArr
+   usersArr,
+   getAdminUsers
 }
