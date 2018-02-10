@@ -45,6 +45,17 @@ const isUserExist = userID => {
    }
 }
 
+const getUserRealName = userID => {
+   const user = getUserObject(userID)
+
+   if (user) {
+      console.log(user.real_name)
+      return user.real_name
+   } else {
+      return false
+   }
+}
+
 // TODO: function to getUserRealName (real name by id)
 // TODO: function to get user time zone
 // TODO: function to check if user active
@@ -57,5 +68,6 @@ module.exports = {
    getUserObject,
    isUserExist,
    adminUsersArr,
-   ownerUsersArr
+   ownerUsersArr,
+   getUserRealName
 }
