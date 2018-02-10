@@ -1,5 +1,6 @@
 let usersList = []
 let adminUsers = []
+let ownerUsers = []
 
 const usersArr = () => usersList
 
@@ -20,8 +21,15 @@ const getAdminUsers = () => {
    console.log(adminUsers)
 }
 
+const getOwnerUsers = () => {
+   ownerUsers = usersList.filter(member => member.is_owner == true)
+
+   console.log(ownerUsers)
+}
+
 module.exports = {
    updateUsersList,
    usersArr,
-   getAdminUsers
+   getAdminUsers,
+   getOwnerUsers
 }
