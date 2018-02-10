@@ -3,6 +3,8 @@ let adminUsers = []
 let ownerUsers = []
 
 const usersArr = () => usersList
+const adminUsersArr = () => adminUsers
+const ownerUsersArr = () => ownerUsers
 
 const updateUsersList = data => {
    usersList = data.members.filter(
@@ -53,5 +55,7 @@ module.exports = {
    getAdminUsers,
    getOwnerUsers,
    getUserObject,
-   isUserExist
+   isUserExist,
+   adminUsersArr,
+   ownerUsersArr
 }
