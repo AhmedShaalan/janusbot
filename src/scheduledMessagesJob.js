@@ -2,22 +2,17 @@ const CronJob = require('cron').CronJob
 const { rtm } = require('./bot')
 const moment = require('moment')
 const { DMChannelsIDsArr } = require('./channels')
-
-// TODO: IMPORTANT: get list of users and push notifications to them.
+const sendToMultipleIDs = require('./sendToMultipleIDs')
 
 var scheduledMessagesJob = new CronJob(
    '* * * * *',
    function() {
       console.debug(`DEBUG: Cron job working @ ${moment().format('HH:mm')}`)
 
-      for (const dmChannelID of DMChannelsIDsArr()) {
-         rtm.sendMessage(
-            `DEBUG: Cron job for DM: ${dmChannelID} @ ${moment().format(
-               'HH:mm'
-            )}`,
-            dmChannelID
-         )
-      }
+      sendToMultipleIDs(
+         `DEBUG: Cron job for DM: @ ${moment().format('HH:mm')}`,
+         DMChannelsIDsArr()
+      )
    },
    function() {
       /* This function is executed when the job stops */
