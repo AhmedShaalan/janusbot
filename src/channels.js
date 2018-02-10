@@ -22,7 +22,7 @@ const extractChannelsIds = () => {
       dmUserId: DMChannelObject.user
    }))
 
-   console.DEBUG('DEBUG: Parsed IDs: ' + DMChannelsIDs)
+   console.debug('DEBUG: Parsed IDs: ' + DMChannelsIDs)
 }
 
 const DMChannelsArr = () => {

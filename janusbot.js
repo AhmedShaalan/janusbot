@@ -36,7 +36,7 @@ web.im.list((err, data) => {
    if (err) {
       console.error('ERROR: web.users.list Error:', err) // eslint-disable-line no-console
    } else {
-      console.log(data)
+      console.debug(data)
       updateDMChannels(data)
    }
 })
