@@ -2,17 +2,27 @@ let DMChannels = []
 let DMChannelsIDs = []
 
 const updateDMChannels = data => {
+   // drop old data if exists.
+   if (DMChannels.length > 0) DMChannels.length = 0
+   if (DMChannelsIDs.length > 0) DMChannelsIDs.length = 0
+
+   // store new data
    DMChannels = data.ims
 
    extractChannelsIds()
 }
 
 const extractChannelsIds = () => {
-   // TODO: filter slackbot from the list
+   DMChannelsIDs = DMChannels.filter(
+      DMChannelObject =>
+         DMChannelObject.is_user_deleted == false &&
+         DMChannelObject.user !== 'USLACKBOT'
+   ).map(DMChannelObject => ({
+      dmId: DMChannelObject.id,
+      dmUserId: DMChannelObject.user
+   }))
 
-   DMChannelsIDs = DMChannels.map(aDMChannel => {
-      return aDMChannel.id
-   })
+   console.DEBUG('DEBUG: Parsed IDs: ' + DMChannelsIDs)
 }
 
 const DMChannelsArr = () => {
