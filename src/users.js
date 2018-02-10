@@ -27,9 +27,23 @@ const getOwnerUsers = () => {
    console.log(ownerUsers)
 }
 
+const getUserObject = userID => {
+   let user = usersList.find(user => user.id === userID)
+   console.log(user)
+
+   if (user) {
+      console.log(user)
+      return user
+   } else {
+      console.log(user)
+      return false
+   }
+}
+
 module.exports = {
    updateUsersList,
    usersArr,
    getAdminUsers,
-   getOwnerUsers
+   getOwnerUsers,
+   getUserObject
 }
