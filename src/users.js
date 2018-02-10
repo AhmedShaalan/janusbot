@@ -48,6 +48,10 @@ const isUserExist = userID => {
    }
 }
 
+// TODO: function to getUserRealName (real name by id)
+// TODO: function to get user time zone
+// TODO: function to check if user active
+
 module.exports = {
    updateUsersList,
    usersArr,
