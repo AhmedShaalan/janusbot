@@ -1,11 +1,7 @@
 {
-   "eslintIntegration": true,
    "tabWidth": 3,
    "singleQuote": true,
    "jsxBracketSameLine": true,
    "arrowParens": "avoid",
    "semi": false,
-   "files.exclude": {
-      "**/._*": true
-   }
 }

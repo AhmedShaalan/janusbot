@@ -9,9 +9,9 @@ const ownerUsersArr = () => ownerUsers
 const updateUsersList = data => {
    usersList = data.members.filter(
       member =>
-         member.is_bot == false &&
-         member.is_app_user == false &&
-         member.deleted == false
+         member.is_bot === false &&
+         member.is_app_user === false &&
+         member.deleted === false
    )
 
    getAdminUsers()
@@ -19,11 +19,11 @@ const updateUsersList = data => {
 }
 
 const getAdminUsers = () => {
-   adminUsers = usersList.filter(member => member.is_admin == true)
+   adminUsers = usersList.filter(member => member.is_admin === true)
 }
 
 const getOwnerUsers = () => {
-   ownerUsers = usersList.filter(member => member.is_owner == true)
+   ownerUsers = usersList.filter(member => member.is_owner === true)
 }
 
 const getUserObject = userID => {
