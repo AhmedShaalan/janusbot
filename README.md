@@ -13,3 +13,4 @@
 * Time zones name: https://momentjs.com/timezone/
 * Corn job time parser: https://crontab.guru
 * Cron job every minute `* * * * *`
+* Using chat.update, your messages can evolve as the consequences of users pressing buttons emerge. (https://api.slack.com/docs/messages)
