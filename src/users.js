@@ -56,6 +56,7 @@ const getUserRealName = userID => {
    }
 }
 
+// TODO: function to get user channel id by user name
 // TODO: function to getUserRealName (real name by id)
 // TODO: function to get user time zone
 // TODO: function to check if user active

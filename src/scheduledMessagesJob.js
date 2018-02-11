@@ -4,7 +4,7 @@ const moment = require('moment')
 const { DMChannelsIDsArr } = require('./channels')
 const sendToMultipleIDs = require('./sendToMultipleIDs')
 
-var scheduledMessagesJob = new CronJob(
+const scheduledMessagesJob = new CronJob(
    '* * * * *',
    function() {
       console.debug(`DEBUG: Cron job working @ ${moment().format('HH:mm')}`)

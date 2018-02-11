@@ -17,5 +17,5 @@
 # v0.0.1 Action list
 
 * Send message at certain time.
-   * the message should contain actions
+   * the message should contain actions (https://api.slack.com/interactive-messages)
    * the message should be personalized (use get user id)
