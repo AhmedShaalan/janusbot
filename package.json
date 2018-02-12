@@ -14,13 +14,12 @@
       "eslint": "^4.17.0"
    },
    "scripts": {
-      "start": "node janusbot.js",
-      "test": "echo \"Error: no test specified\" && exit 1"
+      "start": "node janusbot.js"
    },
    "repository": {
       "type": "git",
       "url": ""
    },
    "author": "Ahmed Shaalan",
-   "license": "Apache-2.0"
+   "license": "MIT"
 }

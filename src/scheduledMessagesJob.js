@@ -24,7 +24,6 @@ const scheduledMessagesJob = new CronJob(
 module.exports = scheduledMessagesJob
 
 // TODO: Set a watchdog for the job
-// TODO: ask the the user for their time zone OR take time zone from slack workspace
 
 // TODO: Unhandled rejection SlackRTMError: ws not connected, unable to send message
 //     at RTMClient.send (/Users/ahmedshaalan/Workspace/Developer/janus/node_modules/@slack/client/lib/clients/rtm/client.js:755:11)
