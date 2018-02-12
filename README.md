@@ -23,8 +23,8 @@ NOTE: make sure you are using it on test workspace, because it sends a message e
 
 # Slack API on Postman
 
-[Useful repo](https://github.com/wrongtarget/slack-api-postman)
- of Slack APIs on Postman by @wrongtarget
+[Useful repo](https://github.com/wrongtarget/slack-api-postman) of Slack APIs on Postman by @wrongtarget
+
 [![Run in Postman](https://run.pstmn.io/button.png)](https://www.getpostman.com/run-collection/367a545243e751d9d3b1)
 
 
